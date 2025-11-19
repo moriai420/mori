@@ -1,30 +1,23 @@
 body {
-    background-color: #ffe6f0;
-    font-family: 'Arial', sans-serif;
-    text-align: center;
-    color: #d6336c;
+  background-color: #ffe6f0;
+  font-family: Arial, sans-serif;
+  color: #d147a3;
+  text-align:center;
 }
-
-h1 {
-    font-size: 2.5em;
-}
-
 button {
-    background-color: #ff99cc;
-    border: 2px solid #d6336c;
-    border-radius: 10px;
-    padding: 15px 30px;
-    margin: 10px;
-    font-size: 1.2em;
-    cursor: pointer;
-    transition: 0.3s;
+  background-color: #ff99cc;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 10px;
 }
-
-button:hover {
-    background-color: #ff66aa;
-    transform: scale(1.1);
+input, select {
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid #d147a3;
 }
-
-#gameArea {
-    margin-top: 20px;
-}
+.gioco { display:none; }
+.cuore { color:red; font-size:20px; }
