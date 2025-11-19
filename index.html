@@ -2,22 +2,28 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>Giochi Romantici</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>❤️ Crush Games ❤️</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>💖 Giochi Romantici 💖</h1>
-        <div class="menu">
-            <a href="crush.html" class="button">Crush Score 4.0</a>
-            <a href="chiConosce.html" class="button">Chi conosce meglio</a>
-            <a href="decisioni.html" class="button">Gioco delle decisioni</a>
-            <a href="memory.html" class="button">Memory Game</a>
-            <a href="eSe.html" class="button">Simulatore 'E se...'</a>
-            <a href="personalita.html" class="button">Questionario personalità</a>
-            <a href="indovina.html" class="button">Indovina la scelta</a>
-            <a href="giorni.html" class="button">Contatore giorni</a>
-        </div>
+    <div id="menu">
+        <h1>❤️ Menu Principale ❤️</h1>
+        <button onclick="showGame('chiConosceMeglio')">Chi conosce meglio l'altro</button>
+        <button onclick="showGame('giocoDecisioni')">Gioco delle decisioni</button>
+        <button onclick="showGame('memoryGame')">Memory Game</button>
+        <button onclick="showGame('simulatoreESe')">Simulatore 'E se...'</button>
+        <button onclick="showGame('questionarioPersonalita')">Questionario personalità</button>
+        <button onclick="showGame('indovinaScelta')">Indovina cosa sceglierà l'altro</button>
+        <button onclick="showGame('contatoreGiorni')">Contatore giorni amicizia</button>
+        <button onclick="showGame('testCompatibilita')">Test compatibilità</button>
+        <button onclick="showGame('sfidaRandom')">Sfida random</button>
+        <button onclick="showGame('complimentiRandom')">Complimento random</button>
+        <button onclick="showGame('crushScore')">Crush Score 4.0</button>
     </div>
+
+    <div id="gameArea"></div>
+
+    <script src="script.js"></script>
 </body>
 </html>
