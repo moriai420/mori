@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<title>❤️ Giochi Romantici ❤️</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Crush Games 💖</title>
+    <link rel="stylesheet" href="stile.css">
 </head>
 <body>
-<h1>❤️ Benvenuti ai Giochi Romantici ❤️</h1>
+    <div id="menu">
+        <h1>💖 CRUSH GAMES 💖</h1>
+        <p>Scegli un gioco:</p>
+        <button onclick="apriGioco('chiConosceMeglio')">Chi conosce meglio l'altro</button>
+        <button onclick="apriGioco('giocoDecisioni')">Gioco delle decisioni</button>
+        <button onclick="apriGioco('memoryGame')">Memory Game</button>
+        <button onclick="apriGioco('simulatoreESe')">Simulatore 'E se...'</button>
+        <button onclick="apriGioco('questionarioPersonalita')">Questionario personalità</button>
+        <button onclick="apriGioco('indovinaScelta')">Indovina cosa sceglierà l'altro</button>
+        <button onclick="apriGioco('contatoreGiorni')">Contatore giorni amicizia</button>
+        <button onclick="apriGioco('testCompatibilita')">Test compatibilità</button>
+        <button onclick="apriGioco('sfidaRandom')">Sfida random</button>
+        <button onclick="apriGioco('complimentiRandom')">Complimento random</button>
+        <button onclick="apriGioco('crushScore4')">Crush Score 4.0</button>
+    </div>
 
-<div id="menu">
-  <button onclick="apriGioco('chiConosceMeglio')">Chi conosce meglio l'altro</button>
-  <button onclick="apriGioco('giocoDecisioni')">Gioco delle decisioni</button>
-  <button onclick="apriGioco('memoryGame')">Memory Game</button>
-  <button onclick="apriGioco('simulatoreESe')">Simulatore 'E se...'</button>
-  <button onclick="apriGioco('questionarioPersonalita')">Questionario della personalità</button>
-  <button onclick="apriGioco('indovinaScelta')">Indovina cosa sceglierà l'altro</button>
-  <button onclick="apriGioco('contatoreGiorni')">Contatore giorni amicizia</button>
-  <button onclick="apriGioco('testCompatibilita')">Test compatibilità</button>
-  <button onclick="apriGioco('sfidaRandom')">Sfida random</button>
-  <button onclick="apriGioco('complimentiRandom')">Complimento random</button>
-  <button onclick="apriGioco('crushScore')">Crush Score 4.0</button>
-</div>
+    <div id="gioco" style="display:none;"></div>
 
-<div id="gioco" class="gioco"></div>
-
-<script src="giochi.js"></script>
+    <script src="giochi.js"></script>
 </body>
 </html>

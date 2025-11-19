@@ -1,23 +1,33 @@
 body {
-  background-color: #ffe6f0;
-  font-family: Arial, sans-serif;
-  color: #d147a3;
-  text-align:center;
+    font-family: Arial, sans-serif;
+    background-color: #ffe6f0;
+    color: #800040;
+    text-align: center;
 }
+
 button {
-  background-color: #ff99cc;
-  border: none;
-  padding: 10px 20px;
-  margin: 10px;
-  cursor: pointer;
-  font-size: 16px;
-  border-radius: 10px;
+    background-color: #ff66b2;
+    border: 2px solid #ff3385;
+    color: white;
+    padding: 12px 20px;
+    margin: 5px;
+    font-size: 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
-input, select {
-  padding: 5px;
-  margin: 5px;
-  border-radius: 5px;
-  border: 1px solid #d147a3;
+
+button:hover {
+    background-color: #ff3385;
+    transform: scale(1.05);
 }
-.gioco { display:none; }
-.cuore { color:red; font-size:20px; }
+
+h1 {
+    font-size: 40px;
+    color: #ff1a75;
+}
+
+#gioco {
+    margin-top: 20px;
+    font-size: 20px;
+}
