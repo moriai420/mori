@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Questionario Personalità 💖</title>
+    <link rel="stylesheet" href="../stile.css">
+</head>
+<body>
+<div class="container">
+    <h1>Questionario della personalità</h1>
+    <div id="domande"></div>
+    <button onclick="verificaPersonalita()">Calcola punteggio</button>
+    <p id="risultato"></p>
+    <a href="../index.html">Torna al menu</a>
+</div>
+
+<script>
+    const domande = [
+        "Ti consideri estroverso/a? (si/no)",
+        "Ti piace pianificare tutto? (si/no)",
+        "Ti senti creativo/a? (si/no)",
+        "Ti piace lavorare in gruppo? (si/no)",
+        "Ti consideri empatico/a? (si/no)"
+    ];
+
+    const divDomande = document.getElementById("domande");
+    domande.forEach((d,i)=>{
+        divDomande.innerHTML += `<p>${d}</p><input type="text" id="q${i}"><br>`;
+    });
+
+    function verificaPersonalita() {
+        let punteggio = 0;
+        domande.forEach((_,i)=>{
+            const val = document.getElementById(`q${i}`).value.toLowerCase().trim();
+            if(val === "si") punteggio++;
+        });
+        document.getElementById("risultato").innerText = `Punteggio personalità: ${punteggio} / ${domande.length}`;
+    }
+</script>
+</body>
+</html>

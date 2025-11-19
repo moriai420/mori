@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulatore 'E se...' 💖</title>
+    <link rel="stylesheet" href="../stile.css">
+</head>
+<body>
+<div class="container">
+    <h1>Simulatore "E se..."</h1>
+    <p>Clicca il pulsante per generare uno scenario e la probabilità che accada.</p>
+    <button onclick="generaScenario()">Genera scenario</button>
+    <p id="risultato"></p>
+    <a href="../index.html">Torna al menu</a>
+</div>
+
+<script>
+    const scenari = [
+        "E se andassimo al cinema insieme?",
+        "E se facessimo una passeggiata nel parco?",
+        "E se organizzassimo una serata giochi?",
+        "E se cucinassimo qualcosa insieme?"
+    ];
+
+    function generaScenario() {
+        const scenario = scenari[Math.floor(Math.random()*scenari.length)];
+        const prob = Math.floor(Math.random()*101);
+        document.getElementById("risultato").innerText = scenario + "\nProbabilità che succeda: " + prob + "%";
+    }
+</script>
+</body>
+</html>

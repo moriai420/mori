@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Complimenti Random 💖</title>
+<link rel="stylesheet" href="../stile.css">
+</head>
+<body>
+<div class="container">
+<h1>Complimenti Random</h1>
+<button onclick="generaComplimento()">Ricevi un complimento</button>
+<p id="risultato"></p>
+<a href="../index.html">Torna al menu</a>
+</div>
+
+<script>
+const complimenti = [
+"Sei bellissimo/a! 💖",
+"Hai un sorriso contagioso 😍",
+"Sei incredibilmente simpatico/a 😊",
+"Ogni giorno illumini il mondo 🌟",
+"Sei una persona speciale 💗"
+];
+
+function generaComplimento() {
+    const c = complimenti[Math.floor(Math.random()*complimenti.length)];
+    document.getElementById("risultato").innerText = c;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Chi conosce meglio 💖</title>
+    <link rel="stylesheet" href="../stile.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Chi conosce meglio l'altro</h1>
+        <div id="domande"></div>
+        <button onclick="verificaChiConosceMeglio()">Invia risposte</button>
+        <p id="risultato"></p>
+        <a href="../index.html">Torna al menu</a>
+    </div>
+
+    <script>
+        const domande = [
+            "Qual è il suo colore preferito?",
+            "Qual è il suo cibo preferito?",
+            "Qual è il suo animale preferito?",
+            "Qual è il suo hobby principale?",
+            "Qual è il suo film preferito?"
+        ];
+
+        const domDiv = document.getElementById("domande");
+
+        domande.forEach((d,i)=>{
+            domDiv.innerHTML += `<p>${d}</p><input type="text" id="q${i}"><br>`;
+        });
+
+        function verificaChiConosceMeglio(){
+            let punti = 0;
+            domande.forEach((_,i)=>{
+                let val = document.getElementById(`q${i}`).value;
+                if(val.trim() !== "") punti++;
+            });
+            document.getElementById("risultato").innerText = `Hai risposto a ${punti} domande su ${domande.length}! 🎉`;
+        }
+    </script>
+</body>
+</html>

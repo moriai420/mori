@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Memory Game 💖</title>
+    <link rel="stylesheet" href="../stile.css">
+</head>
+<body>
+<div class="container">
+    <h1>Memory Game Testuale</h1>
+    <p>Ricorda la sequenza dei colori e poi scrivili nell'ordine corretto.</p>
+    <button onclick="mostraSequenza()">Mostra sequenza</button>
+    <div id="inputDiv"></div>
+    <button onclick="verificaMemory()">Verifica</button>
+    <p id="risultato"></p>
+    <a href="../index.html">Torna al menu</a>
+</div>
+
+<script>
+    const sequenza = ["rosso","verde","blu","giallo"];
+    
+    function mostraSequenza() {
+        alert("Sequenza: " + sequenza.join(", "));
+        const inputDiv = document.getElementById("inputDiv");
+        inputDiv.innerHTML = "";
+        sequenza.forEach((_,i)=>{
+            inputDiv.innerHTML += `<input type="text" id="c${i}" placeholder="Colore ${i+1}"><br>`;
+        });
+    }
+
+    function verificaMemory() {
+        let punti = 0;
+        sequenza.forEach((c,i)=>{
+            const val = document.getElementById(`c${i}`).value.toLowerCase().trim();
+            if(val === c) punti++;
+        });
+        document.getElementById("risultato").innerText = `Hai indovinato ${punti} su ${sequenza.length}! 🎉`;
+    }
+</script>
+</body>
+</html>

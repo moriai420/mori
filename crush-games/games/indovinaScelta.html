@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Indovina la scelta 💖</title>
+<link rel="stylesheet" href="../stile.css">
+</head>
+<body>
+<div class="container">
+<h1>Indovina la scelta</h1>
+<p>Prova a indovinare cosa sto pensando!</p>
+<input type="text" id="sceltaUtente" placeholder="Scrivi la tua scelta">
+<button onclick="verificaScelta()">Prova</button>
+<p id="risultato"></p>
+<a href="../index.html">Torna al menu</a>
+</div>
+
+<script>
+const scelte = ["gelato","film","pizza","cane","gatto"];
+let sceltaSegreta = scelte[Math.floor(Math.random()*scelte.length)];
+
+function verificaScelta() {
+    const input = document.getElementById("sceltaUtente").value.toLowerCase().trim();
+    if(input === sceltaSegreta) {
+        document.getElementById("risultato").innerText = "🎉 Hai indovinato! Era: " + sceltaSegreta;
+    } else {
+        document.getElementById("risultato").innerText = "❌ No, prova ancora!";
+    }
+}
+</script>
+</body>
+</html>

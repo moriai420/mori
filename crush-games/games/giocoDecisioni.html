@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Gioco delle decisioni 💖</title>
+    <link rel="stylesheet" href="../stile.css">
+</head>
+<body>
+<div class="container">
+    <h1>Gioco delle decisioni</h1>
+    <p>Clicca il pulsante e il programma sceglierà per voi!</p>
+    <button onclick="scegliDecisione()">Scegli</button>
+    <p id="risultato"></p>
+    <a href="../index.html">Torna al menu</a>
+</div>
+
+<script>
+    const scelte = [
+        "Guardare un film 🍿",
+        "Uscire a passeggio 🚶‍♂️",
+        "Fare un gioco da tavolo 🎲",
+        "Andare a mangiare una pizza 🍕",
+        "Ascoltare musica insieme 🎶"
+    ];
+
+    function scegliDecisione() {
+        const scelta = scelte[Math.floor(Math.random()*scelte.length)];
+        document.getElementById("risultato").innerText = "La decisione scelta è: " + scelta;
+    }
+</script>
+</body>
+</html>

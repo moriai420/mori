@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Contatore Giorni 💖</title>
+<link rel="stylesheet" href="../stile.css">
+</head>
+<body>
+<div class="container">
+<h1>Contatore giorni insieme</h1>
+<label>Data inizio relazione:</label>
+<input type="date" id="dataInizio">
+<button onclick="calcolaGiorni()">Calcola giorni</button>
+<p id="risultato"></p>
+<a href="../index.html">Torna al menu</a>
+</div>
+
+<script>
+function calcolaGiorni() {
+    const data = new Date(document.getElementById("dataInizio").value);
+    const oggi = new Date();
+    if(isNaN(data)) {
+        document.getElementById("risultato").innerText = "Inserisci una data valida!";
+        return;
+    }
+    const diff = oggi - data;
+    const giorni = Math.floor(diff / (1000*60*60*24));
+    document.getElementById("risultato").innerText = `Siete insieme da ${giorni} giorni! 💖`;
+}
+</script>
+</body>
+</html>

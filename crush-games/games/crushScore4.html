@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Crush Score 4 💖</title>
+<link rel="stylesheet" href="../stile.css">
+</head>
+<body>
+<div class="container">
+<h1>Crush Score 4</h1>
+<label>Nome tuo:</label>
+<input type="text" id="nome1"><br>
+<label>Nome crush:</label>
+<input type="text" id="nome2"><br>
+<button onclick="calcolaCrush()">Calcola Crush Score</button>
+<p id="risultato"></p>
+<a href="../index.html">Torna al menu</a>
+</div>
+
+<script>
+function calcolaCrush() {
+    const n1 = document.getElementById("nome1").value.trim();
+    const n2 = document.getElementById("nome2").value.trim();
+    if(!n1 || !n2) {document.getElementById("risultato").innerText="Inserisci entrambi i nomi!"; return;}
+    const score = Math.floor(Math.random()*101);
+    document.getElementById("risultato").innerText = `💖 Crush Score tra ${n1} e ${n2}: ${score}%`;
+}
+</script>
+</body>
+</html>
